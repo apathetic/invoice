@@ -3,14 +3,18 @@
     "target": "es5",
     "module": "esnext",
     "strict": true,
-    "jsx": "preserve",
     "importHelpers": true,
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "baseUrl": ".",
+    "downlevelIteration": true,
+
+    "noImplicitAny": false, // CHANGE TO TRUE TO ENABLE BETTER TYPECHECKING
+
     "types": [
-      "node"    ],
+      "node"
+    ],
     "paths": {
       "@/*": [
         "src/*"
@@ -25,10 +29,8 @@
   },
   "include": [
     "src/**/*.ts",
-    "src/**/*.tsx",
     "src/**/*.vue",
     "tests/**/*.ts",
-    "tests/**/*.tsx"
   ],
   "exclude": [
     "node_modules"
